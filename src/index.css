@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  
+  /* Primary brand colors - Indigo */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-300 antialiased;
+  }
+  
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full dark:bg-gray-600;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
